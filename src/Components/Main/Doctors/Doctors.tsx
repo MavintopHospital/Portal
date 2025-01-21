@@ -8,9 +8,14 @@ const Doctors = () => {
       <h3 className="text-4xl font-bold text-center mb-20">
         {DoctorsData.heading}
       </h3>
-      <div className="flex justify-between gap-10 overflow-auto px-5 md:p-0">
+      <div className="flex flex-wrap justify-center gap-10 px-5 md:px-0">
         {DoctorsData.doctors.map((doctor, index) => (
-          <Doctor key={index} doc={doctor} />
+          <div
+            key={index}
+            className="p-5 border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-xs"
+          >
+            <Doctor doc={doctor} />
+          </div>
         ))}
       </div>
       <h4 className="text-3xl tracking-wider font-bold text-center my-10 md:mt-20">
@@ -19,7 +24,7 @@ const Doctors = () => {
       <div className="mb-5 m-auto text-center max-w-2xl text-xs sm:text-base md:text-lg">
         {DoctorsData.desc}
       </div>
-      <img className="m-auto" src={DoctorsData.img} />
+      <img className="m-auto max-w-full h-auto" src={DoctorsData.img} alt="Doctors" />
     </SectionWrapper>
   );
 };

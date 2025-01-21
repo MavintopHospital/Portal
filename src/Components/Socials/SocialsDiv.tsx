@@ -1,27 +1,27 @@
 import {
-  BsFacebook,
+  /* BsFacebook,
   BsInstagram,
   BsLinkedin,
   BsTwitter,
-  BsGithub,
+  BsGithub, */
 } from 'react-icons/bs';
 const SocialsDiv = () => {
   return (
     <div className="flex gap-3 my-3 text-2xl ml-1">
-      <a target="_blank" href="https://www.linkedin.com/in/letodiani-roma/">
-        <BsLinkedin />
+      <a target="_blank" href="">
+        {/* <BsLinkedin /> */}
       </a>
-      <a target="_blank" href="https://github.com/RomaLetodiani">
-        <BsGithub />
+      <a target="_blank" href="">
+       {/*  <BsGithub /> */}
       </a>
-      <a target="_blank" href="https://www.facebook.com/LetodianiRoma/">
-        <BsFacebook />
+      <a target="_blank" href="">
+       {/*  <BsFacebook /> */}
       </a>
-      <a target="_blank" href="https://www.instagram.com/roma.letodiani/">
-        <BsInstagram />
+      <a target="_blank" href="">
+        {/* <BsInstagram /> */}
       </a>
-      <a target="_blank" href="https://twitter.com/l3todianiroma">
-        <BsTwitter />
+      <a target="_blank" href="">
+        {/* <BsTwitter /> */}
       </a>
     </div>
   );

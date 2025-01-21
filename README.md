@@ -17,5 +17,3 @@
 4. Deploy the landing page to your preferred hosting platform.
 
 Explore the codebase and documentation to get started with your Hospital Landing Page project today!
-
-🌐 Live Demo: [Hospital Landing Page Demo](https://romaletodiani.github.io/Hospital-Website/)

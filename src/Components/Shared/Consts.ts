@@ -2,10 +2,6 @@ import neurology from '@/assets/Images/Icons/Neurology.png';
 import cardiology from '@/assets/Images/Icons/Cardiology.png';
 import orthopedics from '@/assets/Images/Icons/Orthopoedics.png';
 import surgery from '@/assets/Images/Icons/Surgery.png';
-import dentistry from '@/assets/Images/Icons/Dentistry.png';
-import radiology from '@/assets/Images/Icons/Radiology.png';
-import urology from '@/assets/Images/Icons/Urology.png';
-import medicine from '@/assets/Images/Icons/Medicine.png';
 import seeMoreImage from '@/assets/Images/Icons/seeMoreImage.png';
 
 import Banner1 from '@/assets/Images/Banner1.png';
@@ -22,7 +18,7 @@ import user3 from '@/assets/Images/users/user3.jpg';
 
 import logo from '@/assets/Images/logo.png';
 
-export const links = ['Home', 'Doctors', 'Services', 'Reviews'];
+export const links = ['Home', 'Doctors', 'Services', 'Contact']; //, 'Reviews'
 
 export const descNums = [
   {
@@ -50,139 +46,80 @@ export const descNums = [
 export const ServicesData = [
   {
     img: neurology,
-    title: 'Neurology',
-    id: 'neurology',
-    heading: 'Neurology Department',
+    title: 'Inpatient',
+    id: 'inpatient',
+    heading: 'Inpatient Facility',
     texts: [
-      'Expert neurological consultations',
-      'Comprehensive brain and nerve care',
-      'Advanced neuroimaging services',
-      'Treatment for epilepsy and seizures',
-      'Memory and cognitive assessments',
-      'Pediatric neurology expertise',
-      'Movement disorders management',
+      'High risk pregnancy management',
+      'Well equipped labour theatre with USG and NST machines with electronic maternal monitoring',
+      'High dependency unit (HDU)',
+      'Obstetric Intensive care unit (ICU)',
+      'Operation theratre',
+      'Emergency services -24x7',
+      'Newborn care corner (NBCC) with well equipped resuscitation warmer',
+      'Newborn Stabilization unit (NBSU)',
+      'Neonatal intensive care unit (NICU)',
+      'ART centre (Infertility centre)',
     ],
   },
   {
     img: cardiology,
-    title: 'Cardiology',
-    id: 'cardiology',
-    heading: 'Cardiology Department',
+    title: 'Outpatient',
+    id: 'outpatient',
+    heading: 'Outpatient Services',
     texts: [
-      'Electrocardiogram (ECG)',
-      'Echocardiogram',
-      'Color Doppler Echo',
-      'Dobutamine Stress Echo (DSE)',
-      'Transesophageal Echo (TEE)',
-      'Exercise Tolerance Test (ETT/TMT)',
-      'Halter monitor',
-      '24 Hour Ambulatory BP monitor',
-      'Tilt Test/Tilt Table Test',
+      'Follow up of a high risk neonate',
+      'Preterm care',
+      'Immunization/vaccination',
+      'Perinatal counselling',
+      'Genetic counseling',
+      'Lactational counselling',
+      'Speciality clinics',
     ],
   },
   {
     img: orthopedics,
-    title: 'Orthopedics',
-    id: 'orthopedics',
-    heading: 'Orthopedics Department',
+    title: 'Obstetrics and Gynecology',
+    id: 'obstetricsandgynecology',
+    heading: 'Obstetrics and Gynecology (Adolescent)',
     texts: [
-      'Orthopedic surgery and joint replacements',
-      'Sports injury and trauma care',
-      'Physical therapy and rehabilitation',
-      'Spine and back pain solutions',
-      'Arthritis and joint disorder treatment',
-      'Orthopedic consultations',
-      'Customized orthopedic care plans',
+      'Adolescent clinic',
+      'Infertility clinic',
+      'High risk pregnancy clinic',
+      'Ultrasonography',
+      'Oncology OPD (cancer)',
+      'Gynecological cancer screening',
+      'Gynecology OPD',
     ],
   },
   {
     img: surgery,
     title: 'Surgery',
     id: 'surgery',
-    heading: 'Surgery Department',
+    heading: 'Surgical/Operation Facility',
     texts: [
-      'Minimally invasive and laparoscopic surgery',
-      'Gastrointestinal surgery and endoscopy',
-      'Plastic and reconstructive surgery',
-      'Cancer and tumor resection',
-      'Post-operative care and recovery',
-      'Surgical consultations',
-      'Emergency surgical interventions',
-    ],
-  },
-  {
-    img: dentistry,
-    title: 'Dentistry',
-    id: 'dentistry',
-    heading: 'Dentistry Department',
-    texts: [
-      'Routine dental check-ups and cleanings',
-      'Cosmetic dentistry and teeth whitening',
-      'Oral surgery and extractions',
-      'Dental implants and restorations',
-      'Pediatric and family dentistry',
-      'Gum disease treatment',
-      'Orthodontic and braces options',
-    ],
-  },
-  {
-    img: radiology,
-    title: 'Radiology',
-    id: 'radiology',
-    heading: 'Radiology Department',
-    texts: [
-      'Advanced diagnostic imaging services',
-      'Mammography and breast health screening',
-      'Interventional radiology procedures',
-      'Virtual colonoscopy and body scans',
-      'Radiology consultations',
-      'Fast and accurate imaging results',
-      'State-of-the-art radiology technology',
-    ],
-  },
-  {
-    img: urology,
-    title: 'Urology',
-    id: 'urology',
-    heading: 'Urology Department',
-    texts: [
-      'Urinary tract and kidney evaluations',
-      'Urologic surgery and stone removal',
-      "Men's and women's urological health",
-      'Prostate and bladder care',
-      'Incontinence and pelvic floor therapy',
-      'Urological consultations',
-      'Comprehensive urology solutions',
-    ],
-  },
-  {
-    img: medicine,
-    title: 'Medicine',
-    id: 'medicine',
-    heading: 'Medicine Department',
-    texts: [
-      'Primary care and internal medicine',
-      'Chronic disease management and prevention',
-      'Immunizations and wellness checks',
-      'Holistic and integrative medicine',
-      'Geriatric and pediatric medicine',
-      'Health education and lifestyle coaching',
-      'Individualized medical treatment plans',
+      'Normal vaginal delivery with labor analgesia',
+      'Caesarean delivery',
+      'Major open surgeries (for gynecological condition)',
+      'Gynecological cancer surgeries',
+      'Laparoscopic surgeries for gynecological condition',
+      'Hysteroscopy (Diagnostic and operative surgeries)',
+      'Laparoscopic tubal banding (sterilization)',
+      'Vaginal surgeries (non-descent vaginal hysterectomy, vaginal myomectomy, reconstructive vaginal surgeries)',
+      'OPU (oocyte pick up) for IVF patients',
     ],
   },
   {
     img: seeMoreImage,
-    title: 'See More',
-    id: 'seemore',
-    heading: 'Explore Our Services',
+    title: 'Ward Facility',
+    id: 'wardfacility',
+    heading: 'Ward Facilities',
     texts: [
-      'Explore additional healthcare options',
-      'Specialized medical services for all needs',
-      'Discover a world of medical solutions',
-      'Find the right care for you',
-      'Comprehensive healthcare offerings',
-      'More than meets the eye',
-      'Healthcare beyond expectations',
+      'General ward',
+      'Post operative ward',
+      'Semi-special ward (twin sharing)',
+      'Single special rooms (with AC/without AC)',
+      'Suite rooms',
     ],
   },
 ];
@@ -193,7 +130,7 @@ export const Banner1Data = {
     'Easy make appointment',
     'Top specialist doctors',
     '24/7 service',
-    'Discount for all medical treatments',
+    'Compassionate and comprehensive care',
     'Enrolment is quick and easy',
   ],
   img: Banner1,
@@ -204,27 +141,42 @@ export const DoctorsData = {
   doctors: [
     {
       img: doc1,
-      name: 'Dr. John Smith',
-      job: 'Cardiologist',
+      name: 'Dr. K.S.Mavintop, M.B.B.S, DGO, M.D(OBG)',
+      job: 'Senior obstetrician, gynecologist, laparoscopic surgeon and infertility specialist',
     },
     {
       img: doc2,
-      name: 'Dr. Kristin Watson',
-      job: 'Dentist',
-    },
-    {
-      img: doc3,
-      name: 'Dr. Robert Flores',
-      job: 'Surgeon',
+      name: 'Dr. Aruna.S.Bythnal, M.B.B.S, M.D(Pathology)',
+      job: 'Senior pathologist and embryologist',
     },
     {
       img: doc4,
-      name: 'Dr. Katherine Allen',
-      job: 'Neurologist',
+      name: 'Dr. Prajna.K.Mavintop, M.B.B.S, M.S(OBG), F.M.A.S, F.R.M',
+      job: 'Gynae oncology and ultrasound obstetrician, gynecologist, laparoscopic surgeon and infertility specialist',
+    },
+    {
+      img: doc3,
+      name: 'Dr. Sachin.K.G, M.B.B.S, M.D(Pediatrics), D.M(Neonatology)',
+      job: 'Consultant pediatrician and neonatal intensivist',
+    },
+    {
+      img: doc3,
+      name: 'Dr. Chethan, (M.S)',
+      job: '',
+    },
+    {
+      img: doc4,
+      name: 'Dr. Divya S H, (M.B.B.S)',
+      job: '',
+    },
+    {
+      img: doc4,
+      name: 'Dr. Abhilasha',
+      job: '',
     },
   ],
   heading2: 'Who Are We?',
-  desc: 'A collaborative hospital service website is a digital platform that brings together healthcare professionals, patients and administrators to streamline and enganhe the delivery of healthcare services. This innovative platform allows for seamless communication and coordination among healthcare teams, enabling them to provide more efficient and personalized care to patients.',
+  desc: 'Mavintop Hospital is a speciality hospital dedicated to women\'s health, maternal and child health, established in 2010, we provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care(maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU(24X7) & NICU, postnatal care, family planning services. Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries. Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.',
   img: Banner2,
 };
 
@@ -254,15 +206,37 @@ export const FeedbackData = {
 
 export const FooterData = {
   logo: logo,
-  addresses: ['4517 Washington Ave', 'Manchester, Kentucky 39495'],
-  phone: '+1 (505) 555-0125',
+  addresses: ['Mavintop Hospital', 'Shamanur road, Davanagere-577004'],
+  phone: '08192-222266',
+  email: 'mavintophospital@gmail.com',
+  /* , 9845148562, 9483743532, 8722966603 */
   departments: [
-    'Cardiology',
-    'Dentistry',
-    'Neurology',
-    'Orthopedics',
-    'Surgery',
+    'Maternal and Child Health',
+    'Infertility Care Unit (MICU)',
+    'Obstetrics and Gynecology',
+    'Pediatrics and Neonatology',
+    'Pathology and Embryology',
+    'Emergency and Intensive Care',
     'More',
   ],
   links: links,
+};
+
+export const timingsAndHolidays = {
+  neonatalPediatricOPD: '1 PM to 2:30 PM, Evening 6 PM to 8 PM',
+  obstetricsGynecologyOPD: '9.30 AM to 5 PM',
+  sunday: 'Holiday',
+  generalHolidays: '10 AM to 1 PM',
+  emergencyServices: '24 x 7',
+  appointmentsOnSpot: 'OPD on spot registration starts from 8 AM to 2 PM',
+  appointmentsPhone: 'only from 9 AM to 10 AM',
+  contact: '08192-222266, 9845148562, 9483743532, 8722966603'
+};
+
+export const googleMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.536232374245!2d75.90268957423086!3d14.45386998065401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba257c81c3b4c9%3A0x3b2eb38f33f42532!2sMavintop%20Hospital!5e0!3m2!1sen!2sin!4v1737458762819!5m2!1sen!2sin";
+
+export const contactDetails = {
+  phoneNumbers: ['08192-222266', '9845148562', '9483743532', '8722966603'],
+  email: 'mavintophospital@gmail.com',
+  whatsappNumber: '9845148562',
 };

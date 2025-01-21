@@ -1,20 +1,9 @@
-import { PaperAirplaneIcon } from '@heroicons/react/24/solid';
+import React, { FC, InputHTMLAttributes } from 'react';
 
-type Props = {
-  placeholder: string;
-};
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = ({ placeholder }: Props) => {
-  return (
-    <div className="relative">
-      <input
-        type="email"
-        placeholder={placeholder}
-        className="w-full pl-5 pr-10 py-2 rounded-xl outline-none shadow-md border-[#1d4d85] border-2 bg-transparent placeholder:text-[#1d4d85]"
-      />
-      <PaperAirplaneIcon className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6" />
-    </div>
-  );
+const Input: FC<InputProps> = ({ ...props }) => {
+  return <input {...props} className="border p-2 rounded w-full" />;
 };
 
 export default Input;

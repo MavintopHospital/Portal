@@ -5,7 +5,7 @@ import { useState } from 'react';
 import useMediaQuery from '@/Hooks/useMediaQuery';
 
 import Links from './Links';
-import Button from '../UI/Button';
+/* import Button from '../UI/Button'; */
 type Props = {
   flexBetween: string;
   selectedPage: SelectedPage;
@@ -26,7 +26,7 @@ const NavBar = ({ flexBetween, selectedPage, setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           </div>
-          <Button>Log In</Button>
+          {/* <Button>Log In</Button> */}
         </div>
       )}
       {!isAboveMediumScreens && (
