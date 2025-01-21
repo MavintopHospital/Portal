@@ -3,6 +3,7 @@ import Services from './Services/Services';
 import Doctors from './Doctors/Doctors';
 /* import Reviews from './Review/Reviews'; */
 import Contact from './Contact/Contact';
+import ContactButtons from './ContactButtons';
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
       <Services />
       <Doctors />
       <Contact />
+      <ContactButtons />
     </div>
   );
 };

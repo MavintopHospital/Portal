@@ -15,20 +15,20 @@ const ContactDiv = () => {
   };
 
   return (
-    <div className="max-w-xs">
-      <p className="ml-1 font-bold max-w-[250px]">
+    <div className="max-w-xs mx-auto p-4 space-y-4">
+      <p className="font-bold text-center">
         Have Something To Talk About With Our Professionals?
       </p>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center space-y-4">
         <Input 
           placeholder="Your Email" 
           value={email} 
           onChange={handleEmailChange} 
-          className="w-3/4 p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
         />
         <button 
           type="submit" 
-          className="w-1/2 py-3 bg-primary text-white rounded-full shadow-md hover:bg-[#158ace] transition-all duration-300"
+          className="mt-4 p-2 bg-blue-500 text-white rounded"
         >
           Send Email
         </button>

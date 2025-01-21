@@ -36,20 +36,20 @@ const NavBar = ({ flexBetween, selectedPage, setSelectedPage }: Props) => {
       )}
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 top-0 z-40 h-80 rounded-es-3xl w-[175px] md:w-[300px] bg-secondary drop-shadow-2xl">
+        <div className="fixed inset-0 z-40 bg-gray-800 bg-opacity-75 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out">
           {/* CLOSE ICON */}
-          <div className="flex justify-end p-5 md:pr-16 sm:pt-10">
-            <button onClick={() => setIsMenuToggled((prev) => !prev)}>
+          <div className="absolute top-4 right-4">
+            <button onClick={() => setIsMenuToggled(false)} className="text-white">
               <XMarkIcon className="h-10 w-10" />
             </button>
           </div>
 
           {/* MENU ITEMS */}
-          <div className=" ml-[20%] flex flex-col items-start gap-5 text-2xl">
-            <Links
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+          <div className="flex flex-col items-center gap-8 text-2xl text-white">
+            <a href="#home" onClick={() => setIsMenuToggled(false)} className="hover:text-gray-300 transition-colors duration-200">Home</a>
+            <a href="#services" onClick={() => setIsMenuToggled(false)} className="hover:text-gray-300 transition-colors duration-200">Services</a>
+            <a href="#doctors" onClick={() => setIsMenuToggled(false)} className="hover:text-gray-300 transition-colors duration-200">Doctors</a>
+            <a href="#contact" onClick={() => setIsMenuToggled(false)} className="hover:text-gray-300 transition-colors duration-200">Contact</a>
           </div>
         </div>
       )}
