@@ -24,8 +24,12 @@ const ContactDiv = () => {
           placeholder="Your Email" 
           value={email} 
           onChange={handleEmailChange} 
+          className="w-3/4 p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
         />
-        <button type="submit" className="mt-2 p-2 bg-blue-500 text-white rounded">
+        <button 
+          type="submit" 
+          className="w-1/2 py-3 bg-primary text-white rounded-full shadow-md hover:bg-[#158ace] transition-all duration-300"
+        >
           Send Email
         </button>
       </form>

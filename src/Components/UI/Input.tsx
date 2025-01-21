@@ -1,9 +1,7 @@
-import React, { FC, InputHTMLAttributes } from 'react';
+import { FC, InputHTMLAttributes } from 'react';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
-
-const Input: FC<InputProps> = ({ ...props }) => {
-  return <input {...props} className="border p-2 rounded w-full" />;
+const Input: FC<InputHTMLAttributes<HTMLInputElement>> = (props) => {
+  return <input {...props} />;
 };
 
 export default Input;
