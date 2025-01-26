@@ -1,5 +1,4 @@
 import neurology from '@/assets/Images/Icons/Neurology.png';
-import cardiology from '@/assets/Images/Icons/Cardiology.png';
 import orthopedics from '@/assets/Images/Icons/Orthopoedics.png';
 import surgery from '@/assets/Images/Icons/Surgery.png';
 import seeMoreImage from '@/assets/Images/Icons/seeMoreImage.png';
