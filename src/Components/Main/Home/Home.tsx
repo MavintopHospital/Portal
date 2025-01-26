@@ -29,6 +29,9 @@ const Home: React.FC = () => {
           {/* <button onClick={openAppointment} className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
             Appointment Now
           </button> */}
+          <button className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
+  <a href="#contact" className="hover:text-gray-300 transition-colors duration-200">Contact Us</a>
+</button>
         </div>
         <div className="w-full">
           <img src={hero} alt="hero" className="rounded-lg shadow-lg" />
