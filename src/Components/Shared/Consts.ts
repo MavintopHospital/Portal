@@ -49,6 +49,7 @@ export const ServicesData = [
     title: 'Inpatient',
     id: 'inpatient',
     heading: 'Inpatient Facility',
+    subheading: '',
     texts: [
       'High risk pregnancy management',
       'Well equipped labour theatre with USG and NST machines with electronic maternal monitoring',
@@ -63,10 +64,11 @@ export const ServicesData = [
     ],
   },
   {
-    img: cardiology,
+    img: orthopedics,
     title: 'Outpatient',
     id: 'outpatient',
     heading: 'Outpatient Services',
+    subheading: 'Paediatric and Neonatal OPD Services',
     texts: [
       'Follow up of a high risk neonate',
       'Preterm care',
@@ -76,13 +78,8 @@ export const ServicesData = [
       'Lactational counselling',
       'Speciality clinics',
     ],
-  },
-  {
-    img: orthopedics,
-    title: 'Obstetrics and Gynecology',
-    id: 'obstetricsandgynecology',
-    heading: 'Obstetrics and Gynecology (Adolescent)',
-    texts: [
+    subheading1: 'Obstetrics and Gynecology (Adolescent)',
+    texts1: [
       'Adolescent clinic',
       'Infertility clinic',
       'High risk pregnancy clinic',
@@ -97,6 +94,7 @@ export const ServicesData = [
     title: 'Surgery',
     id: 'surgery',
     heading: 'Surgical/Operation Facility',
+    subheading: '',
     texts: [
       'Normal vaginal delivery with labor analgesia',
       'Caesarean delivery',
@@ -111,9 +109,10 @@ export const ServicesData = [
   },
   {
     img: seeMoreImage,
-    title: 'Ward Facility',
-    id: 'wardfacility',
+    title: 'Ward',
+    id: 'ward',
     heading: 'Ward Facilities',
+    subheading: '',
     texts: [
       'General ward',
       'Post operative ward',
@@ -175,8 +174,6 @@ export const DoctorsData = {
       job: '',
     },
   ],
-  heading2: 'Who Are We?',
-  desc: 'Mavintop Hospital is a speciality hospital dedicated to women\'s health, maternal and child health, established in 2010, we provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care(maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU(24X7) & NICU, postnatal care, family planning services. Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries. Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.',
   img: Banner2,
 };
 
@@ -239,4 +236,9 @@ export const contactDetails = {
   phoneNumbers: ['08192-222266', '9845148562', '9483743532', '8722966603'],
   email: 'mavintophospital@gmail.com',
   whatsappNumber: '9845148562',
+};
+
+export const AboutUsData = {
+  heading: 'Who Are We?',
+  description: `Mavintop Hospital is a speciality hospital dedicated to women's health, maternal and child health, established in 2010. We provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care (maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU (24X7) & NICU, postnatal care, family planning services. Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries. Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.`,
 };

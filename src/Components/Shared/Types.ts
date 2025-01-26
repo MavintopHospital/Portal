@@ -9,6 +9,6 @@ export enum SelectedPage {
 export enum SelectedService {
   Inpatient = 'inpatient',
   Outpatient = 'outpatient',
-  Obstetricsandgynecology = 'obstetricsandgynecology',
-  Wardfacility = 'wardfacility',
+  Surgery = 'surgery',
+  Ward = 'ward',
 }

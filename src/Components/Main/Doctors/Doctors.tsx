@@ -18,12 +18,12 @@ const Doctors = () => {
           </div>
         ))}
       </div>
-      <h4 className="text-3xl tracking-wider font-bold text-center my-10 md:mt-20">
+      {/* <h4 className="text-3xl tracking-wider font-bold text-center my-10 md:mt-20">
         {DoctorsData.heading2}
       </h4>
       <div className="mb-5 m-auto text-center max-w-2xl text-xs sm:text-base md:text-lg">
         {DoctorsData.desc}
-      </div>
+      </div> */}
       <img className="m-auto max-w-full h-auto" src={DoctorsData.img} alt="Doctors" />
     </SectionWrapper>
   );
