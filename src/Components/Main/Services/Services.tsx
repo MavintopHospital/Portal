@@ -5,16 +5,16 @@ import { SelectedService } from '@/Components/Shared/Types';
 import ListItem from './ListItem';
 import Banner1 from './Banner1';
 import SectionWrapper from '../SectionWrapper';
-import Appointment from '@/Components/Main/Appointment/Appointment';
+// import Appointment from '@/Components/Main/Appointment/Appointment';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<SelectedService>(
     SelectedService.Inpatient
   );
-  const [isAppointmentOpen, setAppointmentOpen] = useState(false);
+  // const [isAppointmentOpen, setAppointmentOpen] = useState(false);
 
-  const openAppointment = () => setAppointmentOpen(true);
-  const closeAppointment = () => setAppointmentOpen(false);
+  // const openAppointment = () => setAppointmentOpen(true);
+  // const closeAppointment = () => setAppointmentOpen(false);
 
   const selectedServiceData = ServicesData.find(
     (service) => service.id === selectedService
@@ -59,17 +59,17 @@ const Services = () => {
         </ul>
       </>
     )}
-    <button
+    {/* <button
       onClick={openAppointment}
       className="px-6 py-3 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition-all duration-300"
     >
       Book Appointment
-    </button>
+    </button> */}
   </div>
 </div>
       </div>
       <Banner1 />
-      <Appointment isOpen={isAppointmentOpen} onClose={closeAppointment} />
+      {/* <Appointment isOpen={isAppointmentOpen} onClose={closeAppointment} /> */}
     </SectionWrapper>
   );
 };

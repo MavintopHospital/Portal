@@ -77,8 +77,9 @@ export const ServicesData = [
       'Lactational counselling',
       'Speciality clinics',
     ],
-    subheading1: 'Obstetrics and Gynecology (Adolescent)',
+    subheading1: 'Obstetrics and Gynecology',
     texts1: [
+      'Obstetrics OPD ',
       'Adolescent clinic',
       'Infertility clinic',
       'High risk pregnancy clinic',
@@ -226,6 +227,7 @@ export const timingsAndHolidays = {
   emergencyServices: '24 x 7',
   appointmentsOnSpot: 'OPD on spot registration starts from 8 AM to 2 PM',
   appointmentsPhone: 'only from 9 AM to 10 AM',
+  email: 'mavintophospital@gmail.com',
   contact: '08192-222266, 9845148562, 9483743532, 8722966603'
 };
 
@@ -238,6 +240,6 @@ export const contactDetails = {
 };
 
 export const AboutUsData = {
-  heading: 'Who Are We?',
+  heading: '',
   description: `Mavintop Hospital is a speciality hospital dedicated to women's health, maternal and child health, established in 2010. We provide care in areas of preconceptional counselling, complete evaluation of infertility couple and provide services like ART treatment (IVF & ICSI), IUI, Antenatal ultrasound, Antenatal care (maternal and fetal workup), genetic evaluation of couple and fetus, high risk pregnancy management, intrapartum care, labour analgesia, delivery services (24x7), equipped with HDU, obstetric ICU (24X7) & NICU, postnatal care, family planning services. Routine gynaecological care, perimenopausal and postmenopausal, menstrual disorders, routine gynaecological cancer screening, HPV vaccination, gynae-oncology services, surgeries for gynecological pathology, minimal invasive surgery (hysteroscopy & laparoscopy), specialised in vaginal surgeries. Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.`,
 };

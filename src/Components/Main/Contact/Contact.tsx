@@ -18,6 +18,7 @@ const Contact: React.FC = () => {
                     <li><strong>For Appointments:</strong> {timingsAndHolidays.appointmentsOnSpot}</li>
                     <li><strong>For Appointments over Phone:</strong> {timingsAndHolidays.appointmentsPhone}</li>
                 </ul>
+                <p className="mt-4"><strong>Email:</strong> {timingsAndHolidays.email}</p>
                 <p className="mt-4"><strong>Contact:</strong> {timingsAndHolidays.contact}</p>
             </div>
             <div>

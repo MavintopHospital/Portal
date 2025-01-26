@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import hero from '@/assets/images/hero.png';
 import { AboutUsData } from '@/Components/Shared/Consts';
 import SectionWrapper from '../SectionWrapper';
-import Appointment from '@/Components/Main/Appointment/Appointment';
+// import Appointment from '@/Components/Main/Appointment/Appointment';
 
 const Home: React.FC = () => {
-  const [isAppointmentOpen, setAppointmentOpen] = useState(false);
+  // const [isAppointmentOpen, setAppointmentOpen] = useState(false);
 
-  const openAppointment = () => setAppointmentOpen(true);
-  const closeAppointment = () => setAppointmentOpen(false);
+  // const openAppointment = () => setAppointmentOpen(true);
+  // const closeAppointment = () => setAppointmentOpen(false);
 
   return (
     <SectionWrapper id="home">
@@ -26,9 +26,9 @@ const Home: React.FC = () => {
           <p className="text-base lg:text-lg my-6">
             Dedicated to excellence in maternal, child, and infertility care, empowering families with advanced medical expertise and unwavering compassion.
           </p>
-          <button onClick={openAppointment} className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
+          {/* <button onClick={openAppointment} className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300">
             Appointment Now
-          </button>
+          </button> */}
         </div>
         <div className="w-full">
           <img src={hero} alt="hero" className="rounded-lg shadow-lg" />
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
     Specialised in providing perinatal counselling evaluation, newborn intensive care, equipped with neonatal ventilators and incubators, complete vaccination of child from birth, lactational counselling, high risk neonate follow up, newborn screening for metabolic disorders, preterm care.
   </p>
 </div>
-      <Appointment isOpen={isAppointmentOpen} onClose={closeAppointment} />
+      {/* <Appointment isOpen={isAppointmentOpen} onClose={closeAppointment} /> */}
     </SectionWrapper>
   );
 };
