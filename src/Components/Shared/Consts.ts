@@ -6,10 +6,13 @@ import seeMoreImage from '@/assets/Images/Icons/seeMoreImage.png';
 import Banner1 from '@/assets/Images/Banner1.png';
 import Banner2 from '@/assets/Images/Banner2.png';
 
-import doc1 from '@/assets/Images/Doctors/doc1.png';
 import doc2 from '@/assets/Images/Doctors/doc2.png';
 import doc3 from '@/assets/Images/Doctors/doc3.png';
 import doc4 from '@/assets/Images/Doctors/doc4.png';
+
+import DSC_2614 from '@/assets/Images/Doctors/DSC_2614.png';
+import DSC_2620 from '@/assets/Images/Doctors/DSC_2620.png';
+import DSC_2622 from '@/assets/Images/Doctors/DSC_2622.png';
 
 import user1 from '@/assets/Images/users/user1.jpg';
 import user2 from '@/assets/Images/users/user2.jpg';
@@ -139,7 +142,7 @@ export const DoctorsData = {
   heading: 'Meet Our Specialists',
   doctors: [
     {
-      img: doc1,
+      img: DSC_2620,
       name: 'Dr. K.S.Mavintop, M.B.B.S, DGO, M.D(OBG)',
       job: 'Senior obstetrician, gynecologist, laparoscopic surgeon and infertility specialist',
     },
@@ -149,12 +152,12 @@ export const DoctorsData = {
       job: 'Senior pathologist and embryologist',
     },
     {
-      img: doc4,
-      name: 'Dr. Prajna.K.Mavintop, M.B.B.S, M.S(OBG), F.M.A.S, F.R.M',
-      job: 'Gynae oncology and ultrasound obstetrician, gynecologist, laparoscopic surgeon and infertility specialist',
+      img: DSC_2622,
+      name: 'Dr. Prajna.K.Mavintop, M.B.B.S, M.S( OBG) , FRM',
+      job: 'Fellowship in advance laparoscopy , fellowship in cosmetic and regenerative gynaecology',
     },
     {
-      img: doc3,
+      img: DSC_2614,
       name: 'Dr. Sachin.K.G, M.B.B.S, M.D(Pediatrics), D.M(Neonatology)',
       job: 'Consultant pediatrician and neonatal intensivist',
     },
