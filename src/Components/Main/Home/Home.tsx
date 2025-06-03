@@ -1,24 +1,24 @@
 // import React, { useState } from 'react';
 import hero from '@/assets/Images/Hero/hero.png';
-import hero1 from '@/assets/Images/Hero/hero1.png';
-import hero2 from '@/assets/Images/Hero/hero2.png';
-import hero3 from '@/assets/Images/Hero/hero3.png';
-import hero4 from '@/assets/Images/Hero/hero4.png';
-import hero5 from '@/assets/Images/Hero/hero5.png';
-import hero6 from '@/assets/Images/Hero/hero6.png';
-import hero7 from '@/assets/Images/Hero/hero7.png';
-import hero8 from '@/assets/Images/Hero/hero8.png';
-import hero9 from '@/assets/Images/Hero/hero9.png';
-import hero10 from '@/assets/Images/Hero/hero10.png';
-import hero11 from '@/assets/Images/Hero/hero11.png';
-import hero12 from '@/assets/Images/Hero/hero12.png';
-import hero13 from '@/assets/Images/Hero/hero13.png';
-import hero14 from '@/assets/Images/Hero/hero14.png';
-import hero15 from '@/assets/Images/Hero/hero15.png';
+import hero1 from '@/assets/Images/Hero/hero1.jpg';
+import hero2 from '@/assets/Images/Hero/hero2.jpg';
+import hero3 from '@/assets/Images/Hero/hero3.jpg';
+import hero4 from '@/assets/Images/Hero/hero4.jpg';
+import hero5 from '@/assets/Images/Hero/hero5.jpg';
+import hero6 from '@/assets/Images/Hero/hero6.jpg';
+import hero7 from '@/assets/Images/Hero/hero7.jpg';
+import hero8 from '@/assets/Images/Hero/hero8.jpg';
+import hero9 from '@/assets/Images/Hero/hero9.jpg';
+import hero10 from '@/assets/Images/Hero/hero10.jpg';
+import hero11 from '@/assets/Images/Hero/hero11.jpg';
+import hero12 from '@/assets/Images/Hero/hero12.jpg';
+import hero13 from '@/assets/Images/Hero/hero13.jpg';
+import hero14 from '@/assets/Images/Hero/hero14.jpg';
+import hero15 from '@/assets/Images/Hero/hero15.jpg';
 import { AboutUsData } from '@/Components/Shared/Consts';
 import SectionWrapper from '../SectionWrapper';
 // import Appointment from '@/Components/Main/Appointment/Appointment';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const heroImages = [
   hero, hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, hero9, hero10, hero11, hero12, hero13, hero14, hero15
@@ -30,6 +30,8 @@ const Home: React.FC = () => {
   const [isLightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const totalSlides = heroImages.length;
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const lightboxImgRef = useRef<HTMLImageElement>(null);
 
   // const openAppointment = () => setAppointmentOpen(true);
   // const closeAppointment = () => setAppointmentOpen(false);
@@ -40,11 +42,64 @@ const Home: React.FC = () => {
   };
   const closeLightbox = () => setLightboxOpen(false);
 
-  // Optional: Auto-slide every 5s
-  // useEffect(() => {
-  //   const timer = setInterval(nextSlide, 5000);
-  //   return () => clearInterval(timer);
-  // }, [currentSlide]);
+  // Swipe for small view
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+    let startX = 0;
+    let endX = 0;
+    const onTouchStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+    };
+    const onTouchEnd = (e: TouchEvent) => {
+      endX = e.changedTouches[0].clientX;
+      if (endX - startX > 50) {
+        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+      } else if (startX - endX > 50) {
+        setCurrentSlide((prev) => (prev + 1) % totalSlides);
+      }
+    };
+    slider.addEventListener('touchstart', onTouchStart);
+    slider.addEventListener('touchend', onTouchEnd);
+    return () => {
+      slider.removeEventListener('touchstart', onTouchStart);
+      slider.removeEventListener('touchend', onTouchEnd);
+    };
+  }, [totalSlides]);
+
+  // Swipe for full view
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const img = lightboxImgRef.current;
+    if (!img) return;
+    let startX = 0;
+    let endX = 0;
+    const onTouchStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+    };
+    const onTouchEnd = (e: TouchEvent) => {
+      endX = e.changedTouches[0].clientX;
+      if (endX - startX > 50) {
+        setLightboxIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+      } else if (startX - endX > 50) {
+        setLightboxIndex((prev) => (prev + 1) % totalSlides);
+      }
+    };
+    img.addEventListener('touchstart', onTouchStart);
+    img.addEventListener('touchend', onTouchEnd);
+    return () => {
+      img.removeEventListener('touchstart', onTouchStart);
+      img.removeEventListener('touchend', onTouchEnd);
+    };
+  }, [isLightboxOpen, totalSlides]);
+
+  // Auto-slide every 2s for small view
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [totalSlides]);
 
   return (
     <SectionWrapper id="home">
@@ -66,7 +121,10 @@ const Home: React.FC = () => {
             <a href="#contact" className="hover:text-gray-300 transition-colors duration-200">Contact Us</a>
           </button>
         </div>
-        <div className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] relative max-w-5xl mx-auto">
+        <div
+          ref={sliderRef}
+          className="w-full md:w-[65%] lg:w-[70%] xl:w-[75%] relative max-w-5xl mx-auto"
+        >
           <div className="overflow-hidden rounded-2xl shadow-2xl aspect-[16/9] bg-gray-100 cursor-pointer group" onClick={() => openLightbox(currentSlide)}>
             {heroImages.map((img, idx) => (
               <img
@@ -115,6 +173,7 @@ const Home: React.FC = () => {
                 <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
               </button>
               <img
+                ref={lightboxImgRef}
                 src={heroImages[lightboxIndex]}
                 alt={`hero${lightboxIndex}`}
                 className="max-h-[95vh] max-w-[98vw] rounded-2xl shadow-2xl object-contain transition-all bg-white"
