@@ -10,9 +10,9 @@ import doc2 from '@/assets/Images/Doctors/doc2.png';
 import doc3 from '@/assets/Images/Doctors/doc3.png';
 import doc4 from '@/assets/Images/Doctors/doc4.png';
 
-import DSC_2614 from '@/assets/Images/Doctors/DSC_2614.png';
-import DSC_2620 from '@/assets/Images/Doctors/DSC_2620.png';
-import DSC_2622 from '@/assets/Images/Doctors/DSC_2622.png';
+import DSC_2614 from '@/assets/Images/Doctors/DSC_2614.jpg';
+import DSC_2620 from '@/assets/Images/Doctors/DSC_2620.jpg';
+import DSC_2622 from '@/assets/Images/Doctors/DSC_2622.jpg';
 
 import user1 from '@/assets/Images/users/user1.jpg';
 import user2 from '@/assets/Images/users/user2.jpg';
